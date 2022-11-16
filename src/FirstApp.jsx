@@ -1,26 +1,15 @@
 import PropTypes from 'prop-types';
 
 
-/*const newMesage = {
-  mesage: "Hola Mundo",
-  title: "Vado",
-};
 
-const mensaje = () => "Es el retorno de una función";
-*/
-
-
-export const FirstApp = ({ title, subTitle }) => {
-    
-    /*if (!title) {
-        throw new Error('El title no existe');
-    }*/
+export const FirstApp = ({ title, subTitle, name }) => {
 
   return (
     <>
-      <h1> {title} </h1>
-      {/*<h1>{ JSON.stringify( newMesage )}</h1>*/}
+      <h1 data-testid="test-title"> {title} </h1>
       <p> {subTitle} </p>
+      <p> {subTitle} </p>
+      <p> {name} </p>
     </>
   );
 };
@@ -28,9 +17,11 @@ export const FirstApp = ({ title, subTitle }) => {
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };
 
 FirstApp.defaultProps = {
-    title: 'No hay titulo',
+    //title: 'No hay titulo',
     subTitle: 'No hay subtitulo',
+    name: 'Vado Robles',
 }
